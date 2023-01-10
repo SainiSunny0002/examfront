@@ -1,0 +1,44 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                    <div class="container text-center">
+                        <img class="imgWidthAndHeight" src="https://www.freeiconspng.com/thumbs/login-icon/user-login-icon-14.png" alt="">
+                    </div>
+                    <h1 class="text-center">Login Here !!</h1>
+
+                    <form (ngSubmit)="formSubmit()">
+
+                        <mat-form-field class="fill-width" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input 
+                                [(ngModel)]="loginData.username"
+                                required
+                                name="username"
+                                matInput 
+                                placeholder="Enter here">
+                                <mat-hint>Enter valid Username !!</mat-hint>
+                        </mat-form-field>
+<!-- password is 123 -->
+                        <mat-form-field class="fill-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input
+                                [(ngModel)]="loginData.password"
+                                required
+                                name="password"
+                                type="password" 
+                                matInput placeholder="Enter here">
+                        </mat-form-field>
+
+                        <div class="container text-center">
+                            <button type="submit" mat-raised-button color="primary">Login</button>
+                            <button mat-raised-button color="accent" class="ml20">Reset</button>
+                        </div>
+
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

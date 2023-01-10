@@ -1,0 +1,44 @@
+<mat-card>
+    <h1>Profile Details</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg" class="imgWidthAndHeight" alt="">
+                    <h1>{{ loginService.getUser().firstName }} {{ loginService.getUser().lastName }}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table text-center"> 
+                            <tr>
+                                <td>Username</td>
+                                <td>{{ loginService.getUser().username}}</td>
+                            </tr>
+                            <tr>
+                                <td>UserId</td>
+                                <td>Exam{{ loginService.getUser().id }}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{ loginService.getUser().phone }}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <!-- <td>{{ loginService.getUser().authorities[0].authority }}</td> -->
+                                <td>{{ loginService.getUserRole() }}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{ loginService.getUser().enabled?"Active":"Not Active" }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="accent">Share</button>
+    </mat-card-actions>
+</mat-card>
